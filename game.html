@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="scripts/word-list.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+</head>
+<body>
+<audio class="bgm-audio" src="/assets/nirvana-type-guitar-loop-v1-247357.mp3" loop autoplay></audio>
+
+    <div class="game-modal">
+        <div class="content">
+            <img src="/assets/giphy.gif" alt="Game Over GIF">
+            <audio class="win-audio" src="/assets/victory_sJDDywi.mp3" preload="auto"></audio>
+            <audio class="lose-audio" src="/assets/trumpet-fail-242645.mp3" preload="auto"></audio>
+
+            <h4></h4>
+            <p></p>
+            <button class="go-back" onclick="goBack()">Go Back</button>
+            <button class="play-again" onclick="playAgain()">Play Again</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="hangman-box">
+            <img src="/assets/hangman-0.svg" alt="Hangman Pole">
+            <audio class="hangman-audio" src="/assets/old-man-wheelchair-scream-made-with-Voicemod.mp3" preload="auto"></audio>
+        </div>
+        <div class="game-box">
+            <ul class="word-display"></ul>
+            <h4 class="hint-text">Hint: <b></b></h4>
+            <h4 class="guesses-text">Wrong: <b>0 / 6</b></h4>
+            <div class="keyboard"></div>
+        </div>
+    </div>
+
+    <script>
+        const goBack = () => {
+            window.location.href = 'index.html';
+        }
+        const playAgain = () => {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

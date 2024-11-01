@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori - Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title title-top">
+            <span>H</span>
+            <span>A</span>
+            <span>N</span>
+            <span>G</span>
+        </div>
+        <div class="title title-mid">
+            <span>T</span>
+            <span>H</span>
+            <span>E</span>
+        </div>
+        <div class="title title-bottom">
+            <span>P</span>
+            <span>O</span>
+            <span>S</span>
+            <span>E</span>
+            <span>R</span>
+        </div>
+
+        <!-- Category selection container -->
+        <div class="category-container">
+            <div class="category-title">Pilih Genre Lagu</div>
+            <div class="categories">
+                <button class="category" onclick="startGame('rock')">Rock</button>
+                <button class="category" onclick="startGame('altindie')">Alt&indie</button>
+                <button class="category" onclick="startGame('metal')">Metal</button>
+                <button class="category" onclick="startGame('shoegaze')">Shoegaze</button>
+                <button class="category" onclick="startGame('midwestemo')">Midwestemo</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function startGame(category) {
+            window.location.href = `game.html?category=${category}`;
+        }
+    </script>
+</body>
+</html>
